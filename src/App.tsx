@@ -4,6 +4,7 @@ import { ThemeProvider, CssBaseline } from '@mui/material';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import theme from './theme';
 import Layout from './components/Layout';
+import Navbar from './components/Navbar';
 import LandingPage from './pages/LandingPage';
 import Dashboard from './pages/Dashboard';
 import DocumentUpload from './pages/DocumentUpload';
@@ -22,6 +23,7 @@ const App: React.FC = () => {
         <CssBaseline />
         <Router>
           <AuthProvider>
+            <Navbar />
             <Routes>
               {/* Public routes */}
               <Route path="/" element={<LandingPage />} />
